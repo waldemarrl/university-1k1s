@@ -1,0 +1,61 @@
+h1 {
+text-align: center;
+animation: h1 2s linear;
+}
+@keyframes h1 {
+0% {opacity: 0};
+50% {opacity: 0.8};
+100% {opacity: 0};
+}
+body{
+	background-color: rgb(176, 224, 230);
+}
+img{
+	height: 180px;
+	width: 200px;
+	border: 3px solid black;
+}
+figure{
+	display: inline-block;
+}
+p{
+	color: rgb(255, 0, 255);
+	transition: color 20s linear;
+}
+p:hover{
+	color: rgb(75, 0, 130);
+}
+.section1{
+	transform-origin: 50% 100%;
+    transform: perspective(300px) rotateX(25deg);
+}
+.section2{
+	transform-origin: 50% 100%;
+    transform: perspective(300px) rotateY(15deg);
+}
+.section3{
+	transform-origin: 50% 100%;
+    transform: perspective(300px) rotateX(25deg);
+}
+.section4{
+	transform-origin: 50% 100%;
+    transform: perspective(300px) rotateY(165deg);
+}
+.section1:hover{
+	transform: scale(0.5);
+}
+.section2:hover{
+	transform: rotate(45deg);
+}
+.section3:hover{
+	transform: translate(50px);
+}
+.section4:hover{
+	transform: rotate(-20deg);
+}
+.col{
+	height: 300px;
+	width: 300px;
+}
+
+

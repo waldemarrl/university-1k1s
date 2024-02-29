@@ -1,0 +1,197 @@
+<HTML>
+  <HEAD>
+      <title>Лабораторная 9, 10</title>
+      <style>
+          #mybody {
+              font-family:arial;
+          }
+          #c1{
+          width:400px;
+          height:400px;
+          border: 3px solid rgb(34, 139, 34);
+          }
+      </style>
+  </HEAD>
+  <BODY ID="mybody">
+  <IMG ID = "ill" SRC = "rocket.png" STYLE ="position:absolute; left:50px; top:450px; height:150px; width:150px;"/> 
+  <IMG ID="myimg" src="1.png" style="position:absolute; top:50px; left:50px; height:150px; width:150px;" />
+  <textarea ID="txt" style ="position:absolute; top:200px;  font-size: 50px;  font-family: Arial; color:rgb(0, 255, 127)" >Пример</textarea>  
+  <IMG ID="microsoft" src="rockett.png" onclick="init_microsoft()" style="position:absolute; top:330px; left:20px; width:150px; height:100px;" />
+  <div style="position:absolute; top:600px; left:30px">
+  <form name="fenster">   
+    <p>Цвет:</p>
+    <select id='select' name='color' style="color:rgb(71, 63, 63); font-family:arial; border: #228B22 2px solid; margin:10px;">
+      <option id='blue' value="rgb(30, 9, 98)">синий</option>
+      <option id='red' value="rgb(255, 0, 0)">красный</option>
+      <option  id='green' value="rgb(0, 255, 64)">зеленый</option>
+      <option  id='yellow' value="rgb(238, 255, 0)">желтый</option>
+    </select><br/>
+    <input type="radio" name='s' value='1'/>y=x^2</br>
+    <input type="radio" name='s' value='2'/>y=x^3</br>
+    <input type="radio" name='s' value='3'/>y=sin(x)</br>
+    <input type="radio" name='s' value='4'/>y=cos(x)
+  </form>
+  <input type="button" onclick='save()' value='Нарисовать' style="margin:5px; font-family:arial; background-color:rgb(152, 251, 152); border: 2px rgb(34, 139, 34) solid"/>
+  </div>
+  <canvas id="c1" width="400px" height="400px" style="position:absolute; top:650px; left:200px; margin:5px;"></canvas>
+  </BODY>
+  <SCRIPT>
+   
+ 
+  //Задание 1
+  //Создать программу на JS, позволяющую перетащить мышью картинку. 
+  var a=document.getElementById('myimg');
+  a.onmousedown = function() {
+    document.onmousemove = function(element) {
+      a.style.left = element.pageX - a.offsetWidth / 2 + 'px'; //Свойство offsetWidth возвращает ширину элемента.
+      a.style.top = element.pageY - a.offsetHeight / 2 + 'px'; //Свойство offsetHeight возвращает высоту элемента.
+    }
+    a.onmouseup = function() {
+      document.onmousemove = null;
+    }
+    a.ondragstart = function() {
+    return false;
+    };
+  }
+ 
+
+  //Создать программу на JS, позволяющую перетащить мышью текст. 
+  var text=document.getElementById('txt');
+  text.onmousedown = function() {
+    document.onmousemove = function(e) {
+      text.style.left = e.pageX - text.offsetWidth / 2 + 'px'; 
+      text.style.top = e.pageY - text.offsetHeight / 2 + 'px'; 
+    }
+    text.onmouseup = function() {
+      document.onmousemove = null;
+    }
+    text.ondragstart = function() {
+    return false;
+  };
+  }
+  
+      
+  //Задание 2
+  //Создать программу на JS, организующую движение картинки по прямой линии. 
+  function init_microsoft() 
+  {
+    var id_move = setInterval (function() /*позволяет вызывать функцию регулярно, повторяя вызов через определённый интервал времени.*/ 
+    {
+      dx=10,dy=0;
+      у = parseInt(document.all['microsoft'].style.top);
+      x = parseInt(document.all['microsoft'].style.left);
+      
+      document.all.microsoft.style.left = x+dx+'px'; //по х изменяем на 10px при каждом вызове функции
+      if(parseInt(document.all['microsoft'].style.left)>600)// принимает строку в качестве аргумента и возвращает целое число в соответствии с указанным основанием системы счисления.
+      {
+        clearInterval(id_move);
+      }
+    }, 20); //время вызова функции в миллисекундах
+  }
+
+ 
+  //Задание 3
+  //Создать программу на JS, организующую движение картинки по кривой линии и возврат ее в исходное состояние. 
+  ill.onclick=function() 
+  {
+    a=0;
+    flag1=true;
+    var idImg=document.getElementById("ill");
+    var id_move1=setInterval(function move()
+    {
+      if(parseInt(idImg.style.left)<600) //px 
+      {
+        idImg.style.left=parseInt(idImg.style.left)+20;
+        idImg.style.top=parseInt(idImg.style.top)+10;
+      }
+      else {
+      idImg.style.left=25;
+      idImg.style.top=450;
+      }
+}, 10);
+  }
+ 
+  //Задание 4 
+  //Нарисовать график функции, выбрав функцию с помощью радио кнопки (y=x2, y=x3, y=sin(x), y=cos(x)).
+  function save(){
+  var canvas=document.getElementById('c1');
+  var ctx = canvas.getContext('2d');
+  var func=Number(document.forms.fenster.s.value);
+  var col = document.forms.fenster.color.value;   
+  switch(func)
+  {
+ 
+  case 1:{
+  var x=0;
+  var move=setInterval(
+  function draw2()
+  {
+  y=200-0.08*Math.pow(x-200, 2);
+  x=x+0.3;
+  ctx.fillStyle=col;
+  ctx.fillRect(x,y,2,2);
+  }, 5);
+  ;break;}
+ 
+  case 2:{
+  var x=0;
+  var move=setInterval(
+  function draw3()
+  {
+  y=200-0.002*Math.pow(x-200, 3);
+  x=x+0.3;
+  ctx.fillStyle=col;
+  ctx.fillRect(x,y,2,2);
+  }, 1);
+  ;break;}
+ 
+  case 3:{
+  var x=0;
+  var move=setInterval(
+  function drawSin()
+  {
+  y=200+10*Math.sin(0.1*(x-200));
+  x=x+0.3;
+  ctx.fillStyle=col;
+  ctx.fillRect(x,y,2,2);
+  }, 5);
+  break;}
+ 
+  case 4:{
+  var x=0;
+  var move=setInterval(
+  function drawCos()
+  {
+  y=200+10*Math.cos(0.1*(x-200));
+  x=x+0.3;
+  ctx.fillStyle=col;
+  ctx.fillRect(x,y,2,2);
+  }, 5);
+  ;break;}
+  }    
+  }
+ 
+  //Задние 5
+  //Реализовать выбор цвета графика функции с помощью списка.
+  select.onclick= function(){
+  color = document.forms.fenster.color.value;
+  if (color=='blue')
+  { document.all['select'].style.backgroundColor='rgb(30, 9, 98)'
+  document.all['select'].style.borderColor='rgb(30, 9, 98)'
+  document.all['select'].style.color='rgb(30, 9, 98)'}
+  if(color=='red')
+  {document.all['select'].style.backgroundColor='rgb(255, 0, 0)'
+  document.all['select'].style.borderColor='rgb(255, 0, 0)'
+  document.all['select'].style.color='rgb(255, 0, 0)'}
+  if(color=='green')
+  {document.all['select'].style.backgroundColor='rgb(0, 255, 64)'
+  document.all['select'].style.borderColor='rgb(0, 255, 64)'
+  document.all['select'].style.color='rgb(0, 255, 64)'}
+  if(color=='yellow')
+  {document.all['select'].style.backgroundColor='rgb(238, 255, 0)'
+  document.all['select'].style.borderColor='rgb(238, 255, 0)'
+  document.all['select'].style.color='rgb(238, 255, 0)'}
+  }
+  
+  </SCRIPT>
+  </HTML>

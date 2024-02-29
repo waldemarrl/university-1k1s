@@ -1,0 +1,7 @@
+@mixin name {
+  font-size: 36px;
+  text-align: center;
+}
+.topic{
+  @include name;
+}

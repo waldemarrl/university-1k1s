@@ -1,0 +1,23 @@
+span, h1, h2, h3 
+   {
+    color: #fe1e00;
+    font-family: 'Monotype Corsiva';
+    }
+
+ j1 
+   {
+    color: rgb(228, 2, 0);
+    font-size: 18pt;
+    font-family: 'Monotype Corsiva'
+    }
+
+ j2 {
+    color: rgb(255, 223, 0);
+    font-size: 20pt;
+    font-family: 'Times New Roman'
+    }
+j3 {
+    color: rgb(0, 193, 0);
+    font-size: 22pt;
+    font-family: 'Times New Roman'
+    }

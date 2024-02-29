@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .wrapper {
+    max-width: 1000px;
+    margin: 0 auto ;
+    display: flex;
+    justify-content: space-between;
+    }
+    .img {
+    width: 200px;
+    height: 200px;
+    }
+    img{
+    width: 200px;
+    display:block;
+    margin:20px;
+    height: 200px;}
+    @media(min-width: 480px){
+    img{
+    width: 300px;
+    display:block;
+    margin:1 20px;
+    height: 300px;}
+    .wrapper {
+    max-width: 1000px;
+    margin: 0 auto ;
+    flex-direction:column ;
+    justify-content: space-between;
+    }
+    }
+    @media(min-width:768px){
+    img{
+    width: 300px;
+    display:block;
+    margin: 20px;
+    height: 300px;}
+    .wrapper {
+    max-width: 1000px;
+    margin: 0 auto ;
+    flex-direction:row;
+    justify-content: space-between;
+    }
+    @media(max-width:1280px){
+        img{
+    width: 700px;
+    display:block;
+    margin: 20px;
+    height: 700px;}
+    .wrapper {
+    max-width: 1000px;
+    margin: 0 auto ;
+    flex-direction:row;
+    justify-content: space-between;
+    }
+}
+</style>
+<body>
+<div class="wrapper">
+<div class="img">
+<img src="150363792411952183.jpg" alt="">
+</div>
+<div class="img">
+<img src="150363792411952183.jpg" alt="">
+</div>
+<div class="img">
+<img src="150363792411952183.jpg" alt="">
+</div>
+<div class="img">
+<img src="150363792411952183.jpg" alt="">
+</div>
+</div>
+</head>
+</body>
+</html>

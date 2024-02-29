@@ -1,0 +1,41 @@
+h1 {
+text-align: center;
+animation: h1 2s linear infinite;
+}
+@keyframes h1 {
+0% {opacity: 0};
+50% {opacity: 0.8};
+100% {opacity: 0};
+}
+div img{
+border: 5px solid black ;
+position: absolute;
+width: 400px;
+height: 300px;
+opacity: 0;
+animation: div 5s infinite;
+float: right;
+}
+
+@keyframes div {
+0% {opacity: 1};
+20% {opacity: 0;}
+21% {opacity: 0;}
+100% {opacity: 0;}
+}
+
+div .all {
+animation-delay: 0s;
+}
+div .all1 {
+animation-delay: 1s;
+}
+div .all2 {
+animation-delay: 2s;
+}
+div .all3 {
+animation-delay: 3s;
+}
+div .all4 {
+animation-delay: 4s;
+}

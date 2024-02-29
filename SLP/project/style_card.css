@@ -1,0 +1,83 @@
+
+.product1 {
+ float: right;
+ background-image: url(phantom.jpg);
+ background-size: 1130px 700px;
+ background-position: +50px -300px;
+ border: 2px solid #B405BA;
+ height: 150px;
+ width: 1130px;
+ font-weight: 600px;
+ overflow: hidden;
+ padding: 25px 15px;
+ position: relative;
+ text-align: center;
+ transition: all 0.5s ease 0s;
+ margin-right: 30px;
+ margin-top: 20px;
+ margin-left: 30px;
+ margin-bottom: 20px;
+}
+.product1:hover {
+ box-shadow: 0 0 25px rgb(185,5,186,1);
+}
+.product-title a {
+ color: white;
+ font-size:35px ;
+ text-align: left;
+font-weight: 500;
+ text-transform: uppercase;
+}
+.product-desc {
+ border: none;
+ right: 530px;
+ position: relative;
+ color: gray;
+ font-size: 40px;
+ text-align: center;
+
+}
+.product2 {
+ float: right;
+ background-image: url(wraith.jpg);
+ background-size: 1300px 700px;
+ background-position: -50px -300px;
+ border: 2px solid #B405BA;
+ height: 150px;
+ width: 1130px;
+ font-weight: 600px;
+ overflow: hidden;
+ padding: 25px 15px;
+ position: relative;
+ text-align: center;
+ transition: all 0.5s ease 0s;
+ margin-right: 30px;
+ margin-top: 20px;
+ margin-left: 30px;
+ margin-bottom: 20px;
+}
+.product2:hover {
+ box-shadow: 0 0 25px rgb(185,5,186,1);
+}
+.product3 {
+ float: right;
+ background-image: url(culinan.jpg);
+ background-size: 1300px 700px;
+ background-position: 0px -300px;
+ border: 2px solid #B405BA;
+ height: 150px;
+ width: 1130px;
+ font-weight: 600px;
+ overflow: hidden;
+ padding: 25px 15px;
+ position: relative;
+ text-align: center;
+ transition: all 0.5s ease 0s;
+ margin-right: 30px;
+ margin-top: 20px;
+ margin-left: 30px;
+ margin-bottom: 20px;
+}
+.product3:hover {
+ box-shadow: 0 0 25px rgb(185,5,186,1);
+}

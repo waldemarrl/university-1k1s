@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" 
+href="XSLTFile2.xslt"?>
+
+<ALL>
+	<STUDENTS>
+		<STUDENT>
+			<NAME>Смирнов Сергей</NAME>
+			<MATH>9</MATH>
+			<PHYS>6</PHYS>
+			<IT>1</IT>
+		</STUDENT>
+		<STUDENT>
+			<NAME>Иванов Петр</NAME>
+			<MATH>3</MATH>
+			<PHYS>7</PHYS>
+			<IT>5</IT>
+		</STUDENT>
+		<STUDENT>
+			<NAME>Соболев Степан</NAME>
+			<MATH>2</MATH>
+			<PHYS>8</PHYS>
+			<IT>10</IT>
+		</STUDENT>
+		<STUDENT>
+			<NAME>Хващук Олег</NAME>
+			<MATH>6</MATH>
+			<PHYS>8</PHYS>
+			<IT>3</IT>
+		</STUDENT>
+		<STUDENT>
+			<NAME>Степанов Дмитрий</NAME>
+			<MATH>7</MATH>
+			<PHYS>3</PHYS>
+			<IT>10</IT>
+		</STUDENT>
+	</STUDENTS>
+</ALL>

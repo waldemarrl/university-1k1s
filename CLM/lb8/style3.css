@@ -1,0 +1,50 @@
+img{
+	height: 200px;
+	width: 200px;
+}
+h1 {
+text-align: center;
+animation: h1 2s linear infinite;
+}
+@keyframes h1 {
+0% {opacity: 0};
+50% {opacity: 0.8};
+100% {opacity: 0};
+}
+@keyframes around {
+0% { left: 0; top: 0; }
+100% { left: 200px; top: 0; }
+}
+.anime { 
+position: relative;
+animation: around 4s linear infinite; 
+}
+@keyframes around2 {
+0% { left: 0; top: 0; }
+100% { left: 0px; top: 200px; }
+}
+.anime2 { 
+position: relative;
+animation: around2 4s linear infinite; 
+}
+@keyframes around3 {
+0% { left: 400px; top: 100px; }
+25% { left: 200px; top: -10px; }
+60% { left: 300px; top: 100px; }
+100% { left: 60px; top: 180px; }
+}
+.anime3 { 
+position: relative;
+animation: around3 4s linear infinite; 
+}
+@keyframes around4 {
+0% { left: 100px; top: 0px; }
+25% { left: 100px; top: 100px; }
+50% { left: 200px; top: 100px; }
+75% { left: 200px; top: 0px; }
+100% { left: 100px; top: 0px; }
+}
+.anime4 { 
+position: absolute;
+animation: around4 10s linear infinite; 
+}

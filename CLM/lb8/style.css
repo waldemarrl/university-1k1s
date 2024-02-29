@@ -1,0 +1,17 @@
+a {text-decoration: none;}
+
+a:link {
+  color: red; 
+  border-bottom: 1px dashed; 
+}
+a:visited {
+  color: #8B0000;
+}
+a:hover {
+  color: green; 
+  border-bottom: .07em solid;
+}
+a:active {
+  color: rgb(184, 134, 11); 
+  border-bottom: 1px dashed;
+}

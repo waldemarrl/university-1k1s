@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@media(max-width:560px)
+{
+.nav ul {
+margin:0;
+padding:0;
+list-style-type:none;
+}
+.nav>ul>li {
+float:left;
+width:180px;
+position: relative;
+}
+.nav li a {
+display: block;
+border: 1px solid black;
+padding: 8px;
+text-decoration: none;
+}
+.nav li .second {
+display: none;
+position: absolute;
+top: 100%;
+left:0;
+}
+.nav li:hover .second{
+display: block;
+}
+.nav li li {
+width:180px
+}
+h1 {
+display:block;
+border:1px solid black;
+padding: 8px;
+margin:0;
+padding:0;
+}
+div{
+margin:30px;
+}
+}
+.container {
+display: flex;
+flex-flow: row wrap;
+align-content: space-between;
+}
+div{
+border: 1px solid black;
+}
+.menu{
+width: 30%;
+}
+.content{
+width:69.7%;
+text-align: center;
+}
+video{
+width: 300px;
+height: 100px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="menu">
+<nav class=nav>
+<ul>
+<li class=menu><h1>Меню</h1>
+<ul class=second>
+<li>1.YouTube</li>
+<li>2.kinopoisk</li>
+<li>3.Kinogo</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+<div class="content">
+<h1>Аудио</h1>
+<audio controls><source src="audio1.mp3"></audio>
+<audio controls><source src="audio2.mp3"></audio>
+<h1>Видео</h1>
+<video src="video1.mp4" controls></video>
+<video src="video2.mp4" controls></video>
+<video src="video3.mp4" controls></video>
+</div>
+</div>
+</body>
+</html>

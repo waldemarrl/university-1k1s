@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <title>lab11</title>
+</HEAD>
+<script type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+</script>
+<script>
+    $(document).ready(function(){
+    $("#t1").mouseover(function(){
+        $(this).css('color',"green");
+    });
+    $("#t1").mouseout(function(){
+        $(this).css('color',"black");
+    });
+
+    $("#t2").click(function(){
+        $(this).css('fontSize',"50px");
+    });
+    $("#t2").dblclick(function(){
+        $(this).css('fontSize',"");
+    });
+
+    $("#img1").click(function(){
+        $(this).attr('src',"2pic.png");
+    });    
+
+    $("#txt1").click(function(){
+        $(this).html("<img src='pic.jpg' style='height: 180px; width: 320px;'>");
+    });    
+
+    $("#img2").mouseover(function(){
+        $(this).css('width',"512px");
+    });    
+    $("#img2").mouseout(function(){
+        $(this).css('width',"256px");
+    });   
+
+    $("#txt2").dblclick(function(){
+        $(this).css('border',"7px double red");
+    });    
+    $("#txt2").click(function(){
+        $(this).css('border',"0px");
+    });   
+});
+</script>
+<body>
+    <font size="7" color="red">Задание 1</font>
+    <p  id="t1" > Создать программу на JS, изменяющую цвет слова в тексте  при наведении курсора мыши (событие Onmouseover, свойство style.color).</p>
+   
+    <font size="7" color="red">Задание 2</font>
+    <p id="t2"> Создать программу на JS, изменяющую размер шрифта слова  щелчком мыши (событие Onclick, свойство style.fontSize).</p>
+    
+    <font size="7" color="red">Задание 3</font>
+    <p>Создать программу на JS замены картинки на другую при  щелчке мышью с помощью метода getElementById и свойства src</p>
+    <br><img src="1pic.png" style="height: 480px; width: 480px;" id="img1">
+
+    <br><font size="7" color="red">Задание 4</font>
+    <p id="txt1">Создать программу на JS, заменяющую текст изображением, с использованием метода getElementById и свойства innerHTML.</p>
+
+    <br> <font size="7" color="red">Задание 5</font>
+    <p> Создать эффекты увеличения размера рисунка (свойство width) при наведении на него курсора мыши и возврата к первоначальному размеру при уходе курсора с рисунка (событие onmouseout) </p>
+    <br><img src="1.png" id="img2" heigth="256px" width="256px">
+
+    <br><font size="7" color="red">Задание 6</font>
+    <p id="txt2">Нарисовать цветную рамку произвольного стиля вокруг любого абзаца при двойном щелчке (событие dblclick) на абзац</p>
+   
+</body>
+</HTML>

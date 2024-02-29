@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<div>
+		Задание 1
+	</div>
+	<p onmouseover="color(this)" onmouseout="color_back(this)" >
+		Создать программу на JS, изменяющую цвет слова в тексте 
+при наведении курсора мыши (событие Onmouseover, свойство style.color).
+	</p>
+	<div>
+		Задание 2
+	</div>
+	<p onclick="size(this)" ondblclick="size_back(this)" >
+		Создать программу на JS, изменяющую размер слова в тексте 
+при наведении курсора мыши (событие Onmouseover, свойство style.color).
+	</p>
+	<div>
+		Задание 3
+	</div>
+	<img src="puzzel.jpg" id="img" onclick="refresh()" ondblclick="refresh_next()">
+	<div>
+		Задание 4
+	</div>
+	<p id="text_img" onclick="text_img()">
+		Создать программу на JS, заменяющую текст изображением, с использованием метода getElementById и свойства innerHTML.
+	</p>
+	<div>
+		Задание 5
+	</div>
+	<img src="fon.jpg" onmouseover="size_img(this)" onmouseout="size_img_back(this)">
+	<div>
+		Задание 6
+	</div>
+	<p ondblclick="ramka(this)" onclick="ramka_back(this)">
+		Человек-паук Нет пути домой (англ. Spider-Man: No Way Home) — предстоящий американский супергеройский фильм, основанный на персонаже комиксов Marvel Человеке-пауке, созданный Columbia Pictures и Marvel Studios и распространяемый Sony Pictures Releasing.
+	</p>
+<script>
+	function color(element) {
+		element.style.color = "red";
+	}
+	function color_back(element) {
+		element.style.color = "black";
+	}
+	function size(element) {
+		element.style.fontSize = "20px";
+	}
+	function size_back(element) {
+		element.style.fontSize = "16px";
+	}
+	function refresh() {
+		document.getElementById("img").src="phantom.jpg";
+	}
+	function refresh_next() {
+		document.getElementById("img").src="culinan.jpg";
+	}
+	function text_img() {
+		document.getElementById("text_img").innerHTML ="<img src='avto.jpg' heigth='300px' width='500px'>";
+	}
+	function size_img(element) {
+		element.style.width="512px";
+	}
+	function size_img_back(element) {
+		element.style.width="256px";
+	}
+	function ramka(txt) {
+		txt.style.border="5px dashed rgb(0, 255, 0)";
+	}
+	function ramka_back(txt) {
+		txt.style.border="0px";
+	}
+</script>
+</head>
+<body>
+<style>
+	p {
+		font-size: 16px;
+		margin-top: 0;
+	}
+	div {
+		font-size: 16px;
+		font-weight: bold;
+	}
+</style>
+</body>
+</html>

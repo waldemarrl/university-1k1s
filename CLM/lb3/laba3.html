@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>Text</title>
+<style>
+	@font-face{
+		font-family: 'Caveat'; 
+		src:url('fonts/Caveat.woff');
+}
+    @font-face{
+		font-family: 'Exo2'; 
+		src:url('fonts/Exo2.woff');
+}
+    @font-face{
+		font-family: 'Comfortaa'; 
+		src:url('fonts/Comfortaa.woff');
+}
+    p {
+    	font-family: 'Comfortaa';
+    	text-align: justify;
+     	text-indent: 0px;
+    	font-size: 20px;
+    	margin-bottom: 0px;
+    	margin-top: 0px;
+    	line-height: 200%;
+}
+    h1 {
+    	font-family: 'Caveat';
+        font-weight: bold;
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 45px;
+        text-shadow: 1px 1px 2px black;
+        margin-bottom: 0px;
+}
+}
+    h2 {
+    	font-family: 'Exo2';
+    	margin-top: 0.2rem;
+    	margin-bottom: 1.2em;
+    	text-align: left;
+    	text-indent: 25px;
+}
+    p::first-letter{
+    	font-size: 45px;
+    	color: white;
+    	background-color: hsla(180, 100%, 10%, 0.5);
+    	font-weight: bold;
+    }
+    ol li {
+list-style-type: none;
+counter-increment: item;
+}
+    ol li:before {
+content: counter(item, upper-roman) ".";
+color: red;
+}
+    li{
+    	color: black;
+    	font-size: 25px;
+    	font-family: 'Comfortaa';
+    }
+
+    .special{
+    	font-family: 'Exo2';
+    	margin-bottom: 0px;
+    	text-align: left;
+    	text-indent: 25px;
+    }
+
+</style>
+</head>
+<body>
+	<h1>NASCAR</h1>
+	<h2>Национальная ассоциация гонок серийных автомобилей</h2>
+	<p>Частное предприятие, занимающееся организацией автомобильных гонок и сопутствующей деятельностью. Учреждена Биллом Франсом-старшим в 1947—1948 годах в Соединенных Штатах Америки и до сих пор находится в собственности семьи Франс.</p>
+	<p> Ассоциация проводит большое количество различных чемпионатов (серий). Три самых крупные серии NASCAR — Monster Energy NASCAR Cup Series, NASCAR Xfinity Series и NASCAR Camping World Truck Series составляют костяк ассоциации.</p>
+	<h2>Техника</h2>
+	<p>Сток-кары носят имена серийных автомобилей, однако не похожи на них даже внешне. В основе автомобилей лежит трубчатая стальная рама. Заводы (сейчас это — Ford, Chevrolet и Toyota) поставляют командам только блоки цилиндров, и некоторые другие детали — все остальное, включая каркас и внешнюю металлическую обшивку, команды строят сами.</p>
+	<h2 class="special">Содержание</h2>
+	<ol>
+		<li><span>История</span></li>
+		<li><span>Техника</span></li>
+		<li><span>Календарь НАСКАР</span></li>
+		<li><span>Очковая система</span></li>
+		<li><span> Отсылки в массовой культуре</span></li>
+	</ol>
+</body>
+</html>

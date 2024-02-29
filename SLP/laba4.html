@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> laba4 </title>
+<style>
+</style>
+</head>
+<body>
+<script type='text/javascript'>
+document.write('<br><font color="red" size="4">Задание 1</font><br>');
+function Gruppa(grup,spec,kolich)
+{
+   this.grup=grup;
+   this.spec=spec;
+   this.kolich=kolich;
+   this.add_stud=function add_stud(kol) 
+   {
+      this.kolich+=kol;
+      
+      document.write('<br>В группу ' + this.grup + ' добавили ' + kol + ' студентов.<br>');
+   }  
+   this.sub_stud=function sud_stud(kol)
+   {
+      this.kolich-=kol;
+      
+      document.write('Из группы ' + this.grup + ' исключили '+ kol + ' студентов.<br>');
+   }
+   
+}
+let gr3=new Gruppa(3,'ИСиТ', 33);
+document.write('<br>В групее ', gr3.grup,' специальность ', gr3.spec, ', ', gr3.kolich);
+gr3.add_stud(5);
+gr3.sub_stud(3);
+document.write ('В группе,', gr3.grup,' специальность ', gr3.spec, ', стало ' , gr3.kolich, ' студентов<br>');
+
+let gr2=new Gruppa(2, 'ИСиТ', 28);
+document.write('<br>В групее ', gr2.grup,' специальность ', gr2.spec, ', ', gr2.kolich);
+gr2.add_stud(4);
+gr2.sub_stud(6);
+document.write ('В группе, ', gr2.grup,' специальность ', gr2.spec, ', стало ' , gr2.kolich, ' студентов<br>');
+
+let gr1=new Gruppa(1, ' ИСиТ ', 29);
+document.write('<br>В групее ', gr1.grup,' специальность ', gr1.spec, ',  ', gr1.kolich);
+gr1.add_stud(2);
+gr1.sub_stud(8);
+document.write ('В группе, ', gr1.grup,' специальность ', gr1.spec, ', стало ' , gr1.kolich, ' студентов<br>');
+
+
+//2 задание
+document.write ('<br><font color="red" size="4">Задание 2</font><br>');
+function Student (name, surname, math, physic, inf)
+{
+   this.name=name;
+   this.surname=surname;
+   this.math=math;
+   this.physic=physic;
+   this.inf=inf;
+   this.output=function output (name, surname)
+   {
+      document.write (name + surname);
+   }
+   this.scores=function score (math, physic, inf)
+   {
+      let sco= (math + physic + inf)/3;
+      document.write ('<br> Средний балл: ' +  sco.toFixed(2));
+   }
+
+}
+Student.prototype.specc=this.specc;
+let st1= new Student ('<br>Владимир ', 'Лобанов' ,6 ,7, 8);
+st1.output (st1.name, st1.surname);
+st1.scores (st1.math, st1.physic, st1.inf);
+st1.specc = 'ИСИТ';
+document.write ('<br>  Специальность: ', st1.specc,'<br>');
+
+let st2= new Student ('<br>Александр ', 'Лобанов' ,5 ,5, 7);
+st2.output (st2.name, st2.surname);
+st2.scores (st2.math, st2.physic, st2.inf);
+st2.specc = 'ПОИТ';
+document.write ('<br>  Специальность: ', st2.specc,'<br>');
+
+let st3= new Student ('<br>Алексей ', 'Лобанов' ,6 ,9, 10);
+st3.output (st3.name, st3.surname);
+st3.scores (st3.math, st3.physic, st3.inf);
+st3.specc = 'ПОИБМС';
+document.write ('<br>  Специальность: ', st3.specc,'<br>');
+
+// 3 задание
+document.write ('<br><font color="red" size="4">Задание 3</font><br>');
+let massive = [7, 6, 5, 4, 3, 2, 1];
+document.write('<br> Массив: ' + massive);
+delete massive[3];
+document.write ('<br> Полученный массив: ' + massive + '<br>');
+
+document.write ('<br> Второй символ в массиве 5: ', 2 in massive);
+document.write ('<br> Имя студента Владимир: ', 'surname' in st1);
+document.write ('<br> Номер группы 3: ', 'n' in gr3, '<br>');
+
+document.write ('<br> Massive объект Array: ' , massive instanceof Array);
+document.write ('<br> Gruppa объект String: ' , Gruppa instanceof String);
+document.write ('<br> Student объект Object: ' , Student instanceof Object);
+
+function znachenye()
+{
+   return 5;
+}
+</script>
+</body>
+</html>

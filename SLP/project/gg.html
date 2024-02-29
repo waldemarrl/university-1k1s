@@ -1,0 +1,67 @@
+<html>
+<head>
+     <title>Example</title>
+     <style>
+        .first{
+            display: inline;
+            float: left;
+        }
+        .second{
+            display: inline;
+            float: right;
+        }
+     </style>
+</head>
+<body style="background: url(fon.jpg)">
+     <script src="https://dir.by/example_lib/jquery/jquery-3.3.1.min.js"></script>
+     <script src="https://dir.by/example_lib/jquery_ui/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+     <div class="first">
+     <div id="myElement" style="height:159px; width:186px; cursor:hand; background:url(p6.png);">
+     </div>
+     <div id="myElement1" style="height:159px; width:186px; cursor:hand; background:url(p5.png);">
+     </div>
+     <div id="myElement2" style="height:159px; width:186px; cursor:hand; background:url(p4.png);">
+     </div>
+ </div>
+ <div class="second">
+     <div id="myElement3" style="height:159px; width:186px; cursor:hand; background:url(p3.png);">
+     </div>
+     <div id="myElement4" style="height:159px; width:186px; cursor:hand; background:url(p2.png);">
+     </div>
+     <div id="myElement5" style="height:159px; width:186px; cursor:hand; background:url(p1.png);">
+     </div>
+ </div>
+     <script>
+          $( function()
+          {
+               $("#myElement").draggable();
+          });
+          $( function()
+          {
+               $("#myElement1").draggable();
+          });
+          $( function()
+          {
+               $("#myElement2").draggable();
+          });
+           $( function()
+          {
+               $("#myElement3").draggable();
+          });
+            $( function()
+          {
+               $("#myElement4").draggable();
+          });
+             $( function()
+          {
+               $("#myElement5").draggable();
+          });
+
+     </script>
+     <div id="something">
+     <input type='button' value='Разобрать' onclick="location.reload(); return false;">
+     </div>
+     <input type='button' value='Выход' onclick='location.href="body.html"'>
+</body>
+
+</html>

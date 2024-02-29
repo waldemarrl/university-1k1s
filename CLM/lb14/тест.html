@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<svg id="svg1" xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink"   
+     width="200" height="200" viewBox="0 0 120 120" >  
+      <!-- Фон серого цвета       -->
+      <rect width="100%" height="100%" fill="#D0D0D0" />
+      <!-- Путь заполнения линии прогрессбара     -->
+    <polygon points="400,90 450,20 500,90 400,90" fill="none" stroke="#E1E1E1" stroke-width="8"/>
+    <polygon points="400,90 450,20 500,90 400,90" transform="rotate(-90 60 60)" fill="none" stroke-dashoffset="272,04" stroke-dasharray="272,04"  stroke="dodgerblue" stroke-width="8" >
+          <!--Анимация  изменение отступа линии stroke-dashoffset от 314 до 0 -->
+     <animate attributeName="stroke-dashoffset" dur="4s" begin="svg1.click" values="272,04;0" /> 
+     </polygon>
+      <text id="count" x="50%" y="50%" fill="#717171" text-anchor="middle" dy="7" font-size="20">Click</text>
+     
+</svg>
+</body>   
+</html>

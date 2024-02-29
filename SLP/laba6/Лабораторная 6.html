@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script>
+		var wind
+		function opens() {
+			window.open("labaa1.html"," ","width: 150, height: 200");
+		}
+		function closes() {
+			window.close("labaa1.html");
+		}
+		function alerts() {
+			window.document.write("Здравствуйте!");
+		}
+		function openss() {
+			wind = window.open("about:blank"," ","height = 600, width = 600");
+		}
+		function information() {
+			document.write("<table border=1>");
+            document.write("<th>Свойство</th>");
+            document.write("<th>Значение</th>");
+			document.write("<tr><td>Вся информация о браузере:</td><td>" + navigator.userAgent +"</td></tr>");
+			document.write("<tr><td>Версия браузера:</td><td>" + navigator.appVersion + "</td></tr>");
+			document.write("<tr><td>Версия браузера:</td><td>" + navigator.appName + "</td></tr>");
+			document.write("<tr><td>Кодовая версия браузера:</td><td>" + navigator.appCodeName + "</td></tr>");
+			document.write("<tr><td>ОС:</td><td>" + navigator.platform + "</td></tr>");
+			document.write("<tr><td>Положение JAVA:</td><td>" + navigator.javaEnabled() + "</td></tr>");
+			document.write("<tr><td>Ширина экрана:</td><td>" + screen.width + "</td></tr>");
+			document.write("<tr><td>Высота экрана:</td><td>" + screen.height + "</td></tr>");
+			document.write("<tr><td>Глубина цвета:</td><td>" + screen.colorDepth + "</td></tr>");
+			document.write("<tr><td>История посещенённых URL:</td><td>" + history.length + "</td></tr>");
+			document.write("<tr><td>URL текущего документа:</td><td>" + location.href + "</td></tr>");
+			document.write("<tr><td>Путь к загруженному документу:</td><td>" + location.pathname + "</td></tr>");
+			document.write("<tr><td>Имя домена загруженного элемента:</td><td>" + location.host + "</td></tr>");
+		}
+	</script>	
+</head>
+<body>
+<input type="button" value="Открыть окно" onclick="opens()">
+<input type="button" value="Закрыть окно" onclick="closes()">
+<input type="button" value="Вывести сообщение" onclick="alerts()">
+<input type="button" value="Создать пустое окно" onclick="openss()">
+<input type="button" value="Узнать информацию о браузере" onclick="information()">
+</body>
+</html>

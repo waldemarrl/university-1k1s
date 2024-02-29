@@ -1,0 +1,165 @@
+<HTML>
+<HEAD>
+    <title>lab11</title>
+        <style>
+            #mybody {
+                font-family:arial;
+            }
+            #c1{
+            width:400px;
+            height:400px;
+            border: 3px solid limegreen;
+            }
+        </style>
+</HEAD>
+<script type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+</script>
+<BODY ID="mybody">
+    <IMG ID = "ill" SRC = "1.png" STYLE ="position:absolute; left:50px; top:450px; height:150px; width:150px;"/> 
+    <IMG ID="myimg" src="1.png" style="position:absolute; top:50px; left:50px; height:150px; width:150px;" />
+    <textarea ID="txt" style ="position:absolute; top:200px;  font-size: 50px;  font-family: Arial; color: limegreen;" >Пример</textarea>  
+    <IMG ID="microsoft" src="rockett.png" onclick="init_microsoft()" style="position:absolute; top:330px; left:20px; width:150px; height:100px;" />
+    <div style="position:absolute; top:600px; left:30px">
+    <form name="fenster">   
+        <form action="">
+            
+            <div class="flexdisp">
+            <input type="radio" name="function" class="func" value="f1" />y = x^2
+            <input type="radio" name="function" class="func" value="f2" />y = x^3
+            <input type="radio" name="function" class="func" value="f3" />y = sin(x)
+            <input type="radio" name="function" class="func" value="f4" />y = cos(x)
+            </div>
+
+            <div class="flexdisp">
+            <input type="radio" name="color" class="color" value="red" />Красный
+            <input type="radio" name="color" class="color" value="yellow" />Жёлтый
+            <input type="radio" name="color" class="color" value="black" />Зелёный
+            <input type="radio" name="color" class="color" value="blue" />Синий
+    </form>
+    <input type="button" name="build" id="graph" value="Построить"> <br>
+    </div>
+    <canvas id="c1" width="400px" height="400px" ></canvas>
+</BODY>
+<SCRIPT>
+
+var a=document.getElementById('myimg');
+
+$("#myimg").mousedown(function(element) {
+    $(document).mousemove(function(element){
+        $("#myimg").css('left', element.pageX - a.offsetWidth / 2 + 'px' );
+	    $("#myimg").css('top', element.pageY - a.offsetHeight / 2 + 'px');
+    }
+    )   
+    $("#myimg").onmouseup(function() {
+        document.onmousemove = null;
+    }
+    )
+    $("#myimg").ondragstart(function() {
+        return false;
+    })
+})
+
+var text=document.getElementById('txt');
+
+$("#txt").mousedown(function(element) {
+    $(document).mousemove(function(element){
+        $("#txt").css('left', element.pageX - text.offsetWidth / 2 + 'px' );
+	    $("#txt").css('top', element.pageY - text.offsetHeight / 2 + 'px');
+    }
+    )   
+    $("#txt").onmouseup(function() {
+        document.onmousemove = null;
+    }
+    )
+    $("#txt").ondragstart(function() {
+        return false;
+    })
+})
+  
+
+$( "#microsoft" ).click(function() {
+	$( "#microsoft" ).first().animate({left: 500},1000);
+  });
+
+
+$("#ill").click (function() {
+	$("#ill").animate ({marginLeft : 100, marginTop : 160}, 700);
+	$("#ill").animate ({marginLeft : 150,marginTop : -5}, 700);
+	$("#ill").animate ({marginLeft : 200, marginTop:160}, 700);
+	$("#ill").animate ({marginLeft : 250, marginTop:-5}, 700);
+	$("#ill").animate ({marginLeft : 300, marginTop:160}, 700);
+	$("#ill").animate ({marginLeft : 350, marginTop : -5}, 700);
+	$("#ill").animate ({marginLeft : 400, marginTop : 160}, 700);
+	
+})
+
+
+$(document).ready(function() {
+	$('#graph').click(function() {	
+		let fnum = document.getElementsByClassName('func');
+		console.log(fnum);
+		var canvas=document.getElementById('c1');
+		let ctx = canvas.getContext('2d'); 
+		var timer;
+		var color = document.forms[0].color.value;
+		console.log(color);
+
+		for (var i = 0; i < fnum.length; i++) {
+		if (fnum[i].checked) {
+
+			if (fnum[i].value == 'f1') 
+			{
+				var x=0;
+				var move=setInterval(
+				function draw2()
+				{
+				y=200-0.08*Math.pow(x-200, 2);
+				x=x+0.3;
+				ctx.fillStyle=color;
+				ctx.fillRect(x,y,2,2);
+				}, 5);
+			}
+
+			if (fnum[i].value == 'f2')
+			{
+				var x=0;
+				var move=setInterval(
+				function draw3()
+				{
+				y=200-0.002*Math.pow(x-200, 3);
+				x=x+0.3;
+				ctx.fillStyle=color;
+				ctx.fillRect(x,y,2,2);
+				}, 1);
+			}
+
+			if (fnum[i].value == 'f3') {
+				var x=0;
+				var move=setInterval(
+				function drawSin()
+				{
+				y=200+10*Math.sin(0.1*(x-200));
+				x=x+0.3;
+				ctx.fillStyle=color;
+				ctx.fillRect(x,y,2,2);
+				}, 5);
+			}
+	
+			if (fnum[i].value == 'f4') {
+				var x=0;
+				var move=setInterval(
+				function drawCos()
+				{
+				y=200+10*Math.cos(0.1*(x-200));
+				x=x+0.3;
+				ctx.fillStyle=color;
+				ctx.fillRect(x,y,2,2);
+				}, 5);
+			}
+		}
+	}
+	})
+})
+
+</SCRIPT>
+</HTML>

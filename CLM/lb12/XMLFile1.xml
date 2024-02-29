@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" 
+href="XSLTFile1.xslt"?>
+<list>
+  <person>
+    <name>Владимир</name>
+    <surname>Лобанов</surname>
+  </person>
+  <person>
+    <name>Алексей</name>
+    <surname>Дрозд</surname>
+  </person>
+  <person>
+    <name>Дмиртрий</name>
+    <surname>Архипов</surname>
+  </person>
+</list>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Document</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<div id="nav" onmouseover="onmouse(event)">
+<div class="menu-item">
+Меню 1
+<div class="submenu">
+Подменю
+</div>
+
+</div>
+<div class="menu-item">
+Меню 2
+<div class="submenu">
+Подменю
+</div>
+</div>
+<div class="menu-item">
+Меню 3
+<div class="submenu">
+Подменю
+</div>
+</div>
+</div>
+<script>
+//Задание 6. Создайте меню, использую средства HTML/CSS/JS
+
+document.getElementById('nav').onmouseover = function(event){
+
+var target = event.target; //отслеживает нахождение мыши внутри блока
+
+if (target.className == 'menu-item'){ //отслеживаем клик
+var s = target.getElementsByClassName('submenu');
+closeMenu();
+s[0].style.display='block';//массив, содержащий ложное меню
+}
+}
+
+document.onmouseover=function(event){
+var target = event.target;
+
+if (target.className!='menu-item' &&
+target.className!='submenu'){
+closeMenu();
+}
+}
+
+function closeMenu(){
+//получение всех элементов подменю в блоке nav, присваивание
+var menu = document.getElementById('nav');
+var subm=document.getElementsByClassName('submenu');
+for (var i=0; i <subm.length; i++){
+subm[i].style.display ="none";
+}
+}
+</script>
+</body>
+<style>
+	body {
+    font-family: Arial, sans-serif;
+    }
+    
+    h1,
+    h2 {
+    text-align: center;
+    }
+    
+    #nav{
+    display: flex;
+    }
+    
+    .menu-item {
+    width: 100px;
+    background: #98FB98;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+    color: #ffffff;
+    text-align: center;
+    }
+    
+    .menu-item > .submenu {
+    transition: 0.3s ease-in-out;
+    display: none;
+    padding: 10px;
+    background: #7cb8b8;
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    width: 100px;
+    margin-left: -10px;
+    margin-top: 10px;
+    }
+</style>
+</html>

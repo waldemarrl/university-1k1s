@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>laba2</title>
+ <style>
+#button input
+{
+color: gold;
+background:red;
+border-radius: 6px;
+}
+</style>
+</head>
+<body>
+   <script>
+  function table()
+  {
+    let a = prompt("Введите кол-во строк"," ");
+    let b = prompt("Введите кол-во столбцов"," ");
+    document.write("<table border= '1'>");
+    for (i=1; i<=a; i++)
+    {
+      document.write("<tr>");
+    for (j=1; j<=b; j++)
+    {
+        document.write("<td>"+i*j+"</td>");
+    }
+    document.write("</tr>");
+    }
+document.write("</table>");
+   }
+
+
+function circle()
+{
+ document.write("<table border = '1'>");
+ document.write("</tr>");
+ document.write("<td>" + "Радиус" + "</td>");
+ document.write("<td>" + "Площадь круга" + "</td>");
+ document.write("<td>" + "Длина окружности" + "</td>");
+ let ak=Number(prompt("Введите а")), bk=Number(prompt("Введите b"));
+ let di=ak;
+ do
+ {
+  kf=di.toFixed(2);
+  document.write("</tr>");
+  document.write("<td>" + kf + "</td>");
+  document.write("<td>" + Math.round (Math.pow(kf,2)* Math.PI) + "</td>");
+  document.write("<td>" + Math.round (2*Math.PI*kf) + "</td>");
+  di=di+0.3;
+ }
+ while(di<=bk)
+}
+
+
+
+function calculus()
+{
+let x=Number(prompt("Введите а")), y=Number(prompt("Введите b"));
+
+
+document.write("<table border = '1'>");
+
+document.write("<tr>");
+document.write("<td>" + "Число" + "</td>");
+document.write("<td>" + "Метод" + "</td>");
+document.write("<td>" + "Результат" + "</td>");
+document.write("<td>" + "Описание метода" + "</td>");
+document.write("</tr>");
+
+document.write("<tr>");
+document.write("<td>" + x + "</td>");
+document.write("<td>" + "toString(16)" + "</td>");
+document.write("<td>" + x.toString(16) + "</td>");
+document.write("<td>" + "Строковое представление числа в 16-ричной системе счисления" + "</td>");
+document.write("</tr>");
+
+document.write("<tr>");
+document.write("<td>" + y + "</td>");
+document.write("<td>" + "toString(16)" + "</td>");
+document.write("<td>" + y.toString(16) + "</td>");
+document.write("<td>" + "Строковое представление числа в 16-ричной системе счисления" + "</td>");
+document.write("</tr>");
+
+document.write("<tr>");
+document.write("<td>" + x + "</td>");
+document.write("<td>" + "toExponential(4)" + "</td>");
+document.write("<td>" + x.toExponential(4) + "</td>");
+document.write("<td>" + "Представление числа в экспоненциальной форме с 4 знаками после точки" + "</td>");
+document.write("</tr>");
+
+document.write("<tr>");
+document.write("<td>" + y + "</td>");
+document.write("<td>" + "toExponential(4)" + "</td>");
+document.write("<td>" + y.toExponential(4) + "</td>");
+document.write("<td>" + "Представление числа в экспоненциальной форме с 4 знаками после точки" + "</td>");
+document.write("</tr>");
+
+document.write("<tr>");
+document.write("<td>" + x + "</td>");
+document.write("<td>" + "toFixed(2)" + "</td>");
+document.write("<td>" + x.toFixed(2)  + "</td>");
+document.write("<td>" + "представление числа в форме с фиксированным количеством цифр (2) после точки" + "</td>");
+
+document.write("</tr>");
+document.write("<td>" + y + "</td>");
+document.write("<td>" + "toFixed(2)" + "</td>");
+document.write("<td>" + y.toFixed(2) + "</td>");
+document.write("<td>" + "представление числа в форме с фиксированным количеством цифр (2) после точки" + "</td>");
+document.write("</tr>");
+
+document.write("<tr>");
+document.write("<td>" + x + "</td>");
+document.write("<td>" + "toPrecision(8)" + "</td>");
+document.write("<td>" + x.toPrecision(8) + "</td>");
+document.write("<td>" + "Представление числа с заданным общим количеством значащих цифр(8)" + "</td>");
+document.write("</tr>");
+
+document.write("<tr>");
+document.write("<td>" + y + "</td>");
+document.write("<td>" + "toPrecision(8)" + "</td>");
+document.write("<td>" + y.toPrecision(8) + "</td>");
+document.write("<td>" + "Представление числа с заданным общим количеством значащих цифр(8)" + "</td>");
+document.write("</table>");
+}
+
+</script>
+<div id="button">
+<input type='button' value='Табл. Ум.' onclick='table()'/>
+<input type='button' value='Круг' onclick='circle()'/>
+<input type='button' value='Числа' onclick='calculus()'/>
+</div> 
+</body>
+</html>

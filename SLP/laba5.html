@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+<title>BMW</title>
+<style>
+    span { 
+     color: red;
+    }
+  </style>
+  <script type='text/javascript'>
+    "use strict";
+    function task1(){
+        let tags_1="length= "+document.all.length+"\n";
+        for(let i=0;i<(document.all.length);i++){
+          tags_1+="Tag " + document.all[i].tagName + " number " + i+"\n";
+     } 
+     alert(tags_1);
+    }       
+    function task2(){
+        let tags_2="length= "+document.body.childNodes.length+"\n";
+        for(let i=0;i<(document.body.childNodes.length);i++){
+          tags_2+="Tag " + document.body.childNodes[i].tagName + " number " + i+"\n";
+     } 
+     alert(tags_2);
+    }    
+    function task3(){
+            let all_1 = document.querySelectorAll('span');
+            alert("Первый элемент span " + all_1[0].innerHTML+"\n");
+            let all_2 = document.getElementsByTagName('span');
+            alert("Первый элемент span " + all_2[0].innerHTML+"\n");
+            let all_3 = document.getElementById('first');
+            alert("Первый элемент span " + all_3.innerHTML+"\n");
+    }    
+    function task4(){let average_marks = 0;
+            let all_4 = document.getElementsByClassName('mark');
+            for (let i = 0; i < all_4.length; i++) {
+                average_marks += parseInt( all_4[i].innerHTML);
+            }
+            average_marks = average_marks/5;
+            alert(average_marks);
+
+            let all_5 = document.getElementsByTagName('span');
+            all_5[1].innerHTML = all_5[1].innerHTML +" средний балл  = " + average_marks;
+        }
+</script>
+</head>
+<body>
+<input type='button' value='1 task'  onclick='task1()'>
+<input type='button' value='2 task'  onclick='task2()'>
+<input type='button' value='3 task'  onclick='task3()'>
+<input type='button' value='4 task'  onclick='task4()'>
+<h1 align="center" style="color:red">BMW</h1>
+<h2><font size="6" color="blue" face="Colibri">История</font></h2>
+<h3><font size="5" color="blue" face="Colibri">До второй мировой войны</font></h3>
+<p><font size="4" color="cyan" face="Arial">Промышленная фирма была основана <span id='first'>Карлом Фридрихом Раппом</span> в октябре 1916 года, официально компания BMW была зарегистрирована 20 июля 1917 года, но первоначально — как производитель авиационных двигателей, Bayerische Flugzeug-Werke. Округ Мюнхена — Milbertshofen был выбран потому, что он располагался близко от Flugmaschinenfabrik Густава Отто — немецкого производителя самолётов.
+</font></p>
+<h3><font size="5" color="blue" face="Colibri">Межвоенный период</font></h3>
+<p><a href="Dixi.html"><font size="4" color="black" face="Times New Roman">В 1928 году BMW приобретает автомобильный завод в Айзенахе (Тюрингия), а с ним — и лицензию на производство небольшого автомобиля под названием Dixi. Компания заключает лицензионное соглашение на постройку радиальных двигателей с американским производителем авиамоторов Pratt & Whitney. <span>Dixi</span> — название первой машины BMW. Она была разработана в 1929 году Austin Motor Company, однако автомобили производились в Айзенахе до сороковых годов. В том же году Эрнст Хенне на мотоцикле с мотором BMW становится самым быстрым мотоциклистом в мире.</font></a></p>
+<h3><font size="5" color="blue" face="Colibri">После войны</font></h3>
+<p><font size="4" color="orange" face="Arial"><span>Могущественный в довоенную эпоху концерн BMW оказался после Второй мировой войны в критическом положении</span> во многом из-за запрета на производство составлявших основу её бизнеса авиационных двигателей и уничтожения или занятия противниками Германии по мировой войне заводов концерна в Мюнхене (Американская зона оккупации Германии) и Айзенахе (Советская военная администрация Германии). Так, Мильбертсхофенский автозавод под Мюнхеном, согласно решению американских оккупационных властей, подлежал сносу. Как и другим немецким автомобильным компаниям с разрушенной Второй мировой войной промышленной базой, BMW понадобились годы на возрождение в качестве серьёзного производителя автомобилей: лишь в 1962 году компания выпустила на рынок автомобиль, позволивший ей выполнить эту задачу.</font></p>
+<h2><font size="6" color="blue" face="Colibri">История</font></h2>
+<ol type="1">
+  <li>До второй мировой войны
+  	<ul type="disc">
+  		<li>Основание фирмы</li>
+  		<li>Первоначальное местоположение</li>
+  	</ul>
+  </li>
+  <li>Межвоенный период
+  <ul type="square">
+  		<li>Приобритение автомобольного завода</li>
+  		<li>Dixi - первый автомобиль BMW</li>
+  	</ul>
+  </li>
+  <li>После войны
+  <ul type="circle">
+  		<li>Критическое положение после Второй мировой войны</li>
+  		<li>Решение о сносе завода под Мюнхеном</li>
+  	</ul>
+  </li>
+</ol>
+<h2><font size="6" color="blue" face="Colibri">История</font></h2>
+<table border="2">
+   <tr>
+    <th colspan="2">Дата</th>
+    <th>Событие</th>
+   </tr>
+   <tr>
+    <td>1928 год</td>
+    <td>Приобритение завода в Айзенахе</td>
+  </tr>
+  <tr>
+    <td>1929 год</td>
+    <td><a href="Dixi.html">Разработка первой машины BMW</a></td>
+  </tr>
+ </table>
+ <h2>Таблица</h2>
+<table border>
+    <td style="text-align:right">ФИО</td> <td colspan="3" style="text-align:center">Дрозд Алексей Игоревич</td>
+    <tr>
+        <td style="text-align:right">Своё фото</td> <td colspan="3" style="text-align:center">Адрес: пр.Рокоссовского, д.49, кв.304</td>
+    </tr>
+    <tr>
+        <td rowspan="6" style="text-align:center">1 семестр<p> 2021/2022</p><p> уч.года</p></td> 
+         <td style="text-align:center">Дата</td> 
+         <td style="text-align:center">Предмет</td>
+         <td style="text-align:center">Оценка</td>
+    </tr>
+    <tr>
+         <td style="text-align:right">31.12.2020</td> 
+         <td style="text-align:center">ОАиП</td> 
+         <td class='mark' style="text-align:center">8</td>
+    </tr>
+    <tr>
+         <td style="text-align:right">05.01.2021</td> 
+         <td style="text-align:center">Мат.анализ</td>
+         <td class='mark' style="text-align:center">9</td>
+    </tr>
+    <tr>
+         <td style="text-align:right">11.01.2021</td> 
+         <td style="text-align:center">ТРПО</td> 
+         <td class='mark' style="text-align:center">7</td>
+    </tr>
+    <tr>
+         <td style="text-align:right">16.01.2021</td> 
+         <td style="text-align:center">Английский язык</td> 
+         <td class='mark' style="text-align:center">9</td>
+    </tr>
+    <tr>
+         <td style="text-align:right">22.01.2021</td> 
+         <td style="text-align:center">АЛОЦВМ</td>
+         <td class='mark' style="text-align:center">9</td>
+    </tr>
+</table>
+</body>
+</html>

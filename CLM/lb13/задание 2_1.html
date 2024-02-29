@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+     <div>
+         <p><span id="firm"></span></p>
+         <p><span id="model"></span></p>
+         <p><span id="speed"></span></p>
+         <p><span id="engine"></span></p>
+         <p><span id="cost"></span></p>
+     </div>
+<script>
+txt = "<car>";
+txt = txt + "<firm>Porche</firm>";
+txt = txt + "<model>Panamera</model>";
+txt = txt + "<speed>280 km/h</speed>";
+txt = txt + "<engine>2.9 litres</engine>";
+txt = txt + "<cost>100 000$</cost>";
+txt = txt +"</car>";
+if (window.DOMParser)
+    {
+        parser = new DOMParser();
+        xmlDoc = parser.parseFromString(txt,"text/xml");
+    }
+else 
+    {
+        xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+        xmlDoc.async = false;
+        xmlDoc.loadXML(txt);
+    }
+document.getElementById("firm").innerHTML = xmlDoc.getElementsByTagName("firm")
+[0].childNodes[0].nodeValue;
+document.getElementById("model").innerHTML = xmlDoc.getElementsByTagName("model")
+[0].childNodes[0].nodeValue;
+document.getElementById("speed").innerHTML = xmlDoc.getElementsByTagName("speed")
+[0].childNodes[0].nodeValue;
+document.getElementById("engine").innerHTML = xmlDoc.getElementsByTagName("engine")
+[0].childNodes[0].nodeValue;
+document.getElementById("cost").innerHTML = xmlDoc.getElementsByTagName("cost")
+[0].childNodes[0].nodeValue;
+</script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head><title>laba3</title></head>
+<body>
+<script type='text/javascript'>
+
+document.write('<br><font color="red" size="4">Задание 1:</font><br>');
+arr=new Array();
+arr[0]=Math.pow(Math.PI,2)*6+3*Math.exp(8);
+arr[1]=2*Math.cos(4)+Math.cos(12)+8*Math.exp(3);
+arr[2]=3*Math.sin(9)+Math.log(5)+Math.sqrt(3);
+arr[3]=2*Math.tan(5)+6*Math.PI+Math.sqrt(12);
+
+let max = Math.max(...arr)
+
+let min = Math.min(...arr)
+
+let b_1=arr[0];
+let f_1=0;
+for(i=0;i<arr.length;i++)
+{
+ if(arr[i]>b_1)
+   {
+     b_1=arr[i];
+     f_1=i;
+   }
+}
+
+let b_2=arr[0];
+let f_2=0;
+for(i=0;i<arr.length;i++)
+   {
+     if(arr[i]<b_2)
+        {
+          b_2=arr[i];
+          f_2=i;
+        }
+    }
+
+
+document.write("Элементы массива", '<br>');
+document.write(arr, '</br>');
+document.write("Наибольший элемент массива = ", + max, '<br>')
+document.write(" Его номер : " +(f_1+1),'<br>');
+document.write("Наименьший элемент массива = ", + min, '<br>')
+document.write(" Его номер : " +(f_2+1),'<br>');
+
+
+document.write('<br><font color="red" size="4">Задание 2:</font><br>');
+let allProperties='pow,pop,push,shift,round,floor,slice,sort'.split(',');
+let allArrayPrototypeProperties=new Set(Object.getOwnPropertyNames(Array.prototype));
+let allMathProperties=new Set(Object.getOwnPropertyNames(Math));
+document.write(intersectedArrayPrototypeProperties,'<br>');
+document.write(intersectedMathProperties,'<br>');
+intersectedArrayPrototypeProperties.unshift('replace');
+intersectedMathProperties.push('exp');
+document.write(intersectedArrayPrototypeProperties , '</br>');
+document.write(intersectedMathProperties , '</br>');
+document.write('Длина массива 1: ',intersectedArrayPrototypeProperties.length , '</br>');
+document.write('Длина массива 2: ',intersectedMathProperties.length , '</br>');
+
+
+document.write('<br><font color="red" size="4">Задание 3:</font><br>');
+mystring='Лобанов Владимир Дмитиевич';
+document.write('Длина строки: ',mystring.length , '</br>');
+document.write(mystring.toUpperCase() , '</br>');
+document.write(mystring.toLowerCase() , '</br>');
+document.write(mystring.concat(mystring.toUpperCase() , mystring.toLowerCase() , '</br>'));
+document.write(mystring.replace( mystring  , 'ЛБД' ,  '<br>'));
+
+
+document.write('<br><font color="red" size="4">Задание 4:</font><br>');
+date=new Date();
+document.write("</table >");
+document.write("<br>");
+document.write("<table border = '1'>");
+
+document.write("</tr>");
+document.write("<td>" + "Год" + "</td>");
+document.write("<td>" +date.getFullYear()+ "</td>");
+
+document.write("</tr>");
+document.write("<td>" + "Месяц" + "</td>");
+let g=date.getMonth();
+let h=g+1;
+document.write("<td>" +h+ "</td>");
+
+document.write("</tr>");
+document.write("<td>" + "День" + "</td>");
+document.write("<td>" +date.getDate()+ "</td>");
+
+document.write("</tr>");
+document.write("<td>" + "Час" + "</td>");
+document.write("<td>" +date.getHours()+ "</td>");
+
+document.write("</tr>");
+document.write("<td>" + "Минуты" + "</td>");
+document.write("<td>" +date.getMinutes()+ "</td>");
+
+document.write("</tr>");
+document.write("<td>" + "Секунды" + "</td>");
+document.write("<td>" +date.getSeconds()+ "</td>");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+news
+{ display:block;
+text-align:center;
+font-size:15pt}
+theme
+{ font-weight:bold;
+color: blue;
+text-align:center}
+information
+{ display:block;
+text-align:left;
+color: purple;
+margin-bottom: 5px;
+}
+statistics
+{ display:block;
+text-align:left;
+color: darkred;
+margin-top: 5px;
+}
+date
+{ display:block;
+text-align:right;
+font-style: italic;
+color: darkorange;
+}

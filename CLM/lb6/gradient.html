@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Gradient</title>
+<style>
+    div{
+    	display: inline-block;
+    }
+    #square{
+    	height: 100px;
+    	width: 100px;
+    }
+	.d1{
+		background-image: linear-gradient(to top, red, blue);
+	}
+	.d2{
+		background-image: repeating-linear-gradient(45deg, red, red 6px, blue 6px, blue 13px);
+	}
+	.d3{
+		background-image: radial-gradient(circle, yellow, green);
+	}
+	.d4{
+		background-image: repeating-radial-gradient(circle, green, green 6px, yellow 6px, yellow 12px);
+	}
+	.d5{
+		background:radial-gradient(circle, yellow 5%,green 55%,transparent),linear-gradient(to bottom, blue,purple);
+	}
+	.d6{
+		background:linear-gradient(to right, yellow 5%,green 45%,transparent),linear-gradient(to bottom, black 15%,grey 40%,white 55%,blue 75%,purple 85%);
+	}
+	nav
+	{
+	 background-position: right top;
+	}
+</style>
+</head>
+<body>
+
+	<nav><a href="map.html">Карта изображения</a>|<a href="laba6.html">Основная</a>|<a href="gallerey.html">Галерея</a>
+
+	<div id="square" class="d1"></div>
+	<div id="square" class="d2"></div>
+	<div id="square" class="d3"></div>
+	<div id="square" class="d4"></div>
+	<div id="square" class="d5"></div>
+	<div id="square" class="d6"></div>
+</body>
+</html>

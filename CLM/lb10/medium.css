@@ -1,0 +1,14 @@
+ @media{
+    img{
+    width: 200px;
+    display:block;
+    margin:1 20px;
+    height: 200px;}
+    .wrapper {
+    max-width: 1000px;
+    margin: 0 auto ;
+    flex-direction:column ;
+    justify-content: space-between;
+    }
+    }
+    }

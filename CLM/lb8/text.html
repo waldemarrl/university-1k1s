@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>Text</title>
+<style>
+	@font-face{
+		font-family: 'Caveat'; 
+		src:url('fonts/Caveat.woff');
+}
+    @font-face{
+		font-family: 'Exo2'; 
+		src:url('fonts/Exo2.woff');
+}
+    @font-face{
+		font-family: 'Comfortaa'; 
+		src:url('fonts/Comfortaa.woff');
+}
+    p {
+    	font-family: 'Comfortaa';
+    	text-align: justify;
+    	text-indent: 25px;
+    	font-size: 20px;
+    	margin-bottom: 0px;
+    	margin-top: 0px;
+    	line-height: 200%;
+}
+    h1 {
+    	font-family: 'Caveat';
+        font-weight: bold;
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 45px;
+        text-shadow: 1px 1px 2px black;
+        margin-bottom: 0px;
+}
+    h2 {
+    	font-family: 'Exo2';
+    	margin-top: 0.2rem;
+    	margin-bottom: 1.2em;
+    	text-align: left;
+    	text-indent: 25px;
+}
+    p::first-letter{
+    	font-size: 45px;
+    	color: white;
+    	background-color: hsla(275, 100%, 10%, 1.0);
+    	font-weight: bold;
+    }
+    ol li {
+list-style-type: none;
+counter-increment: item;
+}
+    ol li:before {
+content: counter(item, upper-roman) ".";
+color: blue;
+}
+    li{
+    	color: black;
+    	font-size: 25px;
+    	font-family: 'Comfortaa';
+    }
+
+    .special{
+    	font-family: 'Exo2';
+    	margin-bottom: 0px;
+    	text-align: left;
+    	text-indent: 25px;
+    }
+
+</style>
+</head>
+<body>
+	<h1>Автоцентр Байернкрафт</h1>
+	<h2>Официальный детейлинг-центр БМВ</h2>
+	<p>В двух последних модельных сериях BMW Group сумела снизить расход топлива на своих автомобилях на более чем на 25% по всей Европе благодаря программе BMW EfficientDynamics. Эта программа является не просто отдельной технологией, но целым комплексом тщательно разработанных мер, предназначенных для снижения расхода топлива и выбросов CO2 с одновременным повышением комфорта от езды.</p>
+	<p>И эти приложения входят в стандартную комплектацию всех новых моделей BMW. Сейчас на дорогах мира ездят более одного миллиона автомобилей с разработанной BMW технологией EfficientDynamics - и их число растет день ото дня.</p>
+	<h2>Замените масло бесплатно.</h2>
+	<p>При условии покупки оригинального моторного масла BMW в Байернкрафт, работы по его замене осуществим абсолютно бесплатно.</p>
+	<h2 class="special">Комплексная диагностика BMW перед зимой за 72 BYN. </h2>
+	<ol>
+		<li><span>Проверка охлаждающей жидкости.</span></li>
+		<li><span>Проверка АКБ.</span></li>
+		<li><span>Осмотр заднего моста не течи масла.</span></li>
+		<li><span>Осмотр состояния пружин передней подвески.</span></li>
+		<li><span>Осмотр состояния пылезащитных манжет передних амортизаторов.</span></li>
+	</ol>
+</body>
+</html>

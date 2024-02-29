@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<form name="formfirst">
+		<textarea disabled cols="25" rows="8" name="textpole" id="44">
+			Факультет 
+			информационных
+			технологий
+		</textarea>
+		<p>
+		<input type="text" value="Фамилия" name="lastname">
+		<br />
+		<input type="text" value="Имя" name="name">
+		<p>
+				Специальность
+	 		<select size="1" name="spec">
+                <option value="ИСиТ">ИСиТ</option>
+                <option value="ПОИТ">ПОИТ</option>
+                <option value="ПОИБМС">ПОИБМС</option>
+                <option value="ДЭВИ">ДЭВИ</option>
+   </select>
+<p>
+	Курс
+	<br />
+<input type="radio" name="kurs" value="1">1
+<input type="radio" name="kurs" value="2">2
+<input type="radio" name="kurs" value="3">3
+<input type="radio" name="kurs" value="4">4
+<p>
+	Предметы
+	<br />
+	<input type="checkbox" name="predmet" value="ОИТ">ОИТ
+	<input type="checkbox" name="predmet" value="ОАП">ОАП
+	<input type="checkbox" name="predmet" value="История">История
+	<input type="checkbox" name="predmet" value="Физика">Физика
+	<input type="checkbox" name="predmet" value="Математика">Математика
+	<p>
+<input type="submit" value="submit">
+<input type="submit" value="reset">
+<p>
+<input type="button" value="Напечатать" name="do" onclick="fun1()">
+	</form>
+</head>
+<body>
+<script>
+	function fun1() {
+        let h=document.forms.formfirst;
+        document.write(h.elements.textpole.value+'<br>');
+        document.write("Студент "+h.elements.lastname.value+" специальность "+h.elements.spec.value+" курс "+h.elements.kurs.value+" должен сдавать следующие предметы:<br> <ul> ");
+            for (let i = 0; i < h.elements.predmet.length; i++) {
+                if (h.elements.predmet[i].checked) {
+                document.write("<li>" + h.elements.predmet[i].value + "</li>");
+                }
+            }
+            document.write("</ul>");
+        }
+</script>
+</body>
+</html>
